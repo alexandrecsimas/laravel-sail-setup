@@ -23,6 +23,19 @@ O comando `new` realiza os seguintes passos:
 7. Roda as migrations para preparar o banco de dados.
 8. Remove a pasta temporária.
 
+## Como usar
+
+1. Dê permissão de execução:
+
+```shell
+chmod +x install-aliases
+```
+
+2. Reinicie seu terminal ou rode:
+```shell
+source ~/.bashrc # ou ~/.zshrc, conforme seu shell
+```
+
 ## Exemplos
 
 Criar um novo projeto:
