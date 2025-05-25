@@ -46,6 +46,9 @@ else
 
             # Remove pasta temporária
             sail_exec "rm -rf /tmp/.laravel-temp"
+
+            # Finaliza os serviços mysql e redis para garantir que no sail up -d tudo levante-se junto
+            $DOCKER_COMPOSE down 
             ;;
     esac
 fi
