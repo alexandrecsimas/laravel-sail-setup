@@ -7,9 +7,9 @@ Aqui você encontrará informações detalhadas sobre a configuração, uso dos 
 
 ## Sumário
 
-- [Script sail](sail.md)
-- [Script install-aliases](install-aliases.md)
-- [Docker e docker-compose](docker.md)
+- [Script sail](02-sail.md)
+- [Script install-aliases](03-install-aliases.md)
+- [Docker e docker-compose](04-docker.md)
 
 
 
