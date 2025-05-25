@@ -28,7 +28,7 @@ O comando `new` realiza os seguintes passos:
 1. Dê permissão de execução:
 
 ```shell
-chmod +x install-aliases
+chmod +x sail
 ```
 
 2. Reinicie seu terminal ou rode:
