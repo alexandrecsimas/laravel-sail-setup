@@ -40,5 +40,5 @@ Para mais detalhes, veja o código fonte do script `install-aliases`.
 
 ---
 
-Para voltar ao menu principal, acesse [Início](HOME.md).
+Para voltar ao menu principal, acesse [Início](01-HOME.md).
 

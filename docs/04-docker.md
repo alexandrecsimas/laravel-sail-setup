@@ -41,4 +41,4 @@ Para mais detalhes, veja os arquivos na pasta `docker/`.
 
 ---
 
-Para voltar ao menu principal, acesse [Início](HOME.md).
+Para voltar ao menu principal, acesse [Início](01-HOME.md).
