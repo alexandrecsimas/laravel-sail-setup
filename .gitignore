@@ -1,0 +1,49 @@
+# Laravel padrão
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env.backup
+
+# Docker e Sail
+docker-compose.override.yml
+docker-compose.*.yml
+docker/Dockerfile*
+docker/.env
+docker/.dockerignore
+
+# Cache e arquivos temporários do Sail
+.sail
+.composer
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Logs e arquivos temporários
+/storage/logs/*
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# Ignorar arquivos gerados pelo npm e yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Outros arquivos temporários
+*.log
+*.cache
+*.tmp

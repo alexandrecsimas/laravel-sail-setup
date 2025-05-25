@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Lista de aliases a serem configurados (adicione outros aqui se quiser)
+declare -A aliases
+aliases[sail]="$(pwd)/sail"
+aliases[new]="$(pwd)/sail new"
+# Exemplo para adicionar um alias para artisan direto:
+# aliases[artisan]="$(pwd)/sail artisan"
+
+# Detecta o shell e o arquivo de configuração correspondente
+current_shell=$(basename "$SHELL")
+case "$current_shell" in
+    bash) config_file="$HOME/.bashrc" ;;
+    zsh)  config_file="$HOME/.zshrc"  ;;
+    *)
+        echo "❌ Shell não suportado: $current_shell"
+        exit 1
+        ;;
+esac
+
+# Garante que o arquivo de configuração existe
+if [ ! -f "$config_file" ]; then
+    echo "⚠️  Arquivo de configuração não encontrado: $config_file"
+    echo "👉 Criando novo arquivo..."
+    touch "$config_file"
+fi
+
+# Para cada alias, verifica se já existe e adiciona se necessário
+for name in "${!aliases[@]}"; do
+    alias_cmd="alias $name='${aliases[$name]}'"
+    if grep -q "$alias_cmd" "$config_file"; then
+        echo "☑️  Alias '$name' já está configurado em $config_file"
+    else
+        # Remove qualquer definição antiga do alias
+        sed -i "/alias $name=/d" "$config_file"
+        # Adiciona o novo alias
+        echo -e "\n# Alias para $name (adicionado automaticamente)" >> "$config_file"
+        echo "$alias_cmd" >> "$config_file"
+        echo "✅ Alias '$name' adicionado ao $config_file"
+    fi
+done
+
+echo -e "\nℹ️  Reinicie o terminal ou execute: source $config_file"
